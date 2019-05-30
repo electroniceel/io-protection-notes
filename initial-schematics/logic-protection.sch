@@ -1,0 +1,203 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Q_NMOS_GDS Q2
+U 1 1 5CC4BF55
+P 4250 3050
+F 0 "Q2" V 4593 3050 50  0000 C CNN
+F 1 "BSS139" V 4502 3050 50  0000 C CNN
+F 2 "" H 4450 3150 50  0001 C CNN
+F 3 "~" H 4250 3050 50  0001 C CNN
+	1    4250 3050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Q_NMOS_GDS Q1
+U 1 1 5CC4C6C1
+P 2850 3050
+F 0 "Q1" V 3193 3050 50  0000 C CNN
+F 1 "BSS139" V 3102 3050 50  0000 C CNN
+F 2 "" H 3050 3150 50  0001 C CNN
+F 3 "~" H 2850 3050 50  0001 C CNN
+	1    2850 3050
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5CC4D9D1
+P 3550 2950
+F 0 "R1" V 3343 2950 50  0000 C CNN
+F 1 "10R" V 3434 2950 50  0000 C CNN
+F 2 "" V 3480 2950 50  0001 C CNN
+F 3 "~" H 3550 2950 50  0001 C CNN
+	1    3550 2950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3050 2950 3300 2950
+Wire Wire Line
+	3700 2950 3800 2950
+Wire Wire Line
+	2850 3250 2850 3300
+Wire Wire Line
+	2850 3300 3800 3300
+Wire Wire Line
+	3800 3300 3800 2950
+Connection ~ 3800 2950
+Wire Wire Line
+	3800 2950 4050 2950
+Wire Wire Line
+	3300 2950 3300 3400
+Wire Wire Line
+	3300 3400 4250 3400
+Wire Wire Line
+	4250 3400 4250 3250
+Connection ~ 3300 2950
+Wire Wire Line
+	3300 2950 3400 2950
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5CC50236
+P 2200 2800
+F 0 "TP1" H 2258 2918 50  0000 L CNN
+F 1 "Pin" H 2258 2827 50  0000 L CNN
+F 2 "" H 2400 2800 50  0001 C CNN
+F 3 "~" H 2400 2800 50  0001 C CNN
+	1    2200 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 2800 2200 2950
+Wire Wire Line
+	2200 2950 2650 2950
+$Comp
+L Diode:BAT54S D1
+U 1 1 5CC507FA
+P 4950 3500
+F 0 "D1" H 4950 3633 50  0000 C CNN
+F 1 "BAT54S" H 4950 3724 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5025 3625 50  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds11005.pdf" H 4830 3500 50  0001 C CNN
+	1    4950 3500
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5CC52374
+P 4550 3850
+F 0 "#PWR01" H 4550 3600 50  0001 C CNN
+F 1 "GND" H 4555 3677 50  0000 C CNN
+F 2 "" H 4550 3850 50  0001 C CNN
+F 3 "" H 4550 3850 50  0001 C CNN
+	1    4550 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 3500 4550 3500
+Wire Wire Line
+	4550 3500 4550 3850
+Wire Wire Line
+	4950 3300 4950 2950
+Wire Wire Line
+	4950 2950 4450 2950
+$Comp
+L Connector:TestPoint TP2
+U 1 1 5CC52E26
+P 4950 2800
+F 0 "TP2" H 5008 2918 50  0000 L CNN
+F 1 "ProtectedLogic" H 5008 2827 50  0000 L CNN
+F 2 "" H 5150 2800 50  0001 C CNN
+F 3 "~" H 5150 2800 50  0001 C CNN
+	1    4950 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 2950 4950 2800
+Connection ~ 4950 2950
+$Comp
+L Reference_Voltage:TL431DBZ U1
+U 1 1 5CC53627
+P 5700 3900
+F 0 "U1" V 5746 3830 50  0000 R CNN
+F 1 "TL431DBZ" V 5655 3830 50  0000 R CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5700 3750 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/tl431.pdf" H 5700 3900 50  0001 C CIN
+	1    5700 3900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5700 3800 5700 3500
+Wire Wire Line
+	5700 3500 5400 3500
+$Comp
+L power:GND #PWR02
+U 1 1 5CC543C0
+P 5700 4350
+F 0 "#PWR02" H 5700 4100 50  0001 C CNN
+F 1 "GND" H 5705 4177 50  0000 C CNN
+F 2 "" H 5700 4350 50  0001 C CNN
+F 3 "" H 5700 4350 50  0001 C CNN
+	1    5700 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5CC54715
+P 5400 3700
+F 0 "R2" H 5470 3746 50  0000 L CNN
+F 1 "3K9" H 5470 3655 50  0000 L CNN
+F 2 "" V 5330 3700 50  0001 C CNN
+F 3 "~" H 5400 3700 50  0001 C CNN
+	1    5400 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5CC54B42
+P 5400 4150
+F 0 "R3" H 5470 4196 50  0000 L CNN
+F 1 "2K7" H 5470 4105 50  0000 L CNN
+F 2 "" V 5330 4150 50  0001 C CNN
+F 3 "~" H 5400 4150 50  0001 C CNN
+	1    5400 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 3550 5400 3500
+Connection ~ 5400 3500
+Wire Wire Line
+	5400 3500 5250 3500
+Wire Wire Line
+	5400 3850 5400 3900
+Wire Wire Line
+	5600 3900 5400 3900
+Connection ~ 5400 3900
+Wire Wire Line
+	5400 3900 5400 4000
+Wire Wire Line
+	5700 4350 5700 4000
+Wire Wire Line
+	5400 4300 5400 4350
+Wire Wire Line
+	5400 4350 5700 4350
+Connection ~ 5700 4350
+Text Notes 5050 3050 0    50   ~ 0
+-0.43 < V < 6.53\nLimited by TL431 & Diode
+Text Notes 3150 2250 0    50   ~ 0
+TP1 to TP2: 36 Ohms
+Text Notes 3100 2450 0    50   ~ 0
+Limited to about 50mA
+$EndSCHEMATC
