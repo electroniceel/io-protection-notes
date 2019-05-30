@@ -10,3 +10,7 @@ Lab notes from developing an io protection circuit for [Glasgow](https://github.
   - tested with permanent +-30v
   - voltage limit is thermal
 
+### RF testing
+
+[see here](rf-tests/README.md)
+
