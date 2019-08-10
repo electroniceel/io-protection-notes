@@ -18,3 +18,6 @@ Lab notes from developing an io protection circuit for [Glasgow](https://github.
 
 [see here](vio-discharge-sim/README.md)
 
+### Diode selection
+
+[see here](diode-selection/README.md)
