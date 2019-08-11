@@ -75,6 +75,8 @@ is mandatory.
    - I use them in series with the CDSOD323-T36SC to "shield" the capacitance of the CDSOD323-T36SC
    - Measured breakdown (1 mA) of the combination under DC conditions: 44.3 V
 
+![](schematics-nup-cdsod323.png)
+
 ![](nup+cdsod323.png)
 
 ### Conclusion
