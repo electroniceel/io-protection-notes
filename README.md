@@ -21,3 +21,7 @@ Lab notes from developing an io protection circuit for [Glasgow](https://github.
 ### Diode selection
 
 [see here](diode-selection/README.md)
+
+### ESD protection
+
+[see here](esd-protection/README.md)
