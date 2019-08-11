@@ -83,10 +83,26 @@ has big impact on the insertion loss at RF. So I wanted to do further tests with
 
 ![](mmsd301.png)
 
+### Improved Measurement
+
+After doing the above measurements, I came to the conclusion that the measurement method used is a bit flawed,
+because the sinusoid output of the tracking generator is centered around GND. So the measurement signal goes negative,
+which a real CMOS data signal from/to Glasgow would not. At 0 dBm and 50 Ohms the measurement signal has 0.316 Vpeak. This
+goes near the voltage where a Schottky diode would begin to conduct and thus influence the measurement.
+
+To fix that, I added RF DC blockers to the output of the tracking generator and input of the spectrum analyzer. Then
+I biased the signal to +0.3 V (0.6 V from my lab supply, injected through a voltage divider 3k3 / 3k3).
+
+With this setup I repeated the measurement of the BAT64:
+
+![](bat64-biased.png)
+
+The insertion loss above 600 MHz improved significantly. But above 500 MHz the BAT64 and BAV99 are still worlds apart.
+
 ### Conclusion
 
    - BAV99 has the lowest impact on RF performance
    - Further testing needs to be done with actual 74LVC1T45 at -0.79V input, also together with the diodes in the actual circuit
-   - If the 74LVC1T45 degrade or get damaged by -0.79V, the BAT64 would be an alternative
+   - If the 74LVC1T45 degrade or get damaged by -0.79V, the BAT64 would be the best alternative
    
    
