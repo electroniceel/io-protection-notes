@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name depletion_fet)(type Legacy)(uri ${KIPRJMOD}/symbols/depletion_fet.lib)(options "")(descr ""))
+)
