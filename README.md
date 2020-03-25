@@ -25,3 +25,7 @@ Lab notes from developing an io protection circuit for [Glasgow](https://github.
 ### ESD protection
 
 [see here](esd-protection/README.md)
+
+### Power Shunt
+
+[see here](power-shunt/README.md)
