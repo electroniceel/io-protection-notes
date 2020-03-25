@@ -47,6 +47,8 @@ I used my [protoboard](https://github.com/electroniceel/protoboard) to build a s
 
 ![](protoboard.jpg)
 
+I do not recommend to use TL431 in SO-8, I just wanted to use up the ones I once misordered.
+
 ### Testing
 
 See comments in the schematics for the results of DC testing.
